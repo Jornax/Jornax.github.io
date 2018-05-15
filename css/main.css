@@ -1,37 +1,137 @@
+/* GENERAL */
 body {
-    margin: 60px auto;
+    margin: 0 auto;
     width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.04);
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+
+ul {
     list-style: none;
-    font-weight: bold;
+    padding: 0;
+    margin: 0;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+p {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    color: #333;
+    max-width: 80ch;
 }
+
+h1, h2, h3 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-weight: 300;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 1.5em 0 1em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
-    color: #999;
+    color: #0077B5;
 }
 a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+
+/* NAVIGATION */
+header, footer {
+    display: flex;
+    align-items: center;
+    font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+
+    margin: 2em 0 1em 0;
+    padding: 0px;
+    font-size: 1.1em;
+    color: #777;
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+
+nav ul {
+    margin: 1em 0;
+}
+
+nav ul li {
+    padding: 1em 1.5em 1em 0;
+}
+
+nav ul li,
+footer ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #999;
+}
+
+nav ul li.active a {
     color: #333;
 }
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+header .name {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #222;
+
+    text-align: right;
+    flex-grow: 1;
+}
+
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    padding: 1.5em 0;
+    font-size: 0.95em;
+}
+
+footer ul li {
+    padding: 1.5em 2em 1.5em 0;
+}
+
+footer ul li a {
+    color: #777;
+}
+
+footer ul li a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+/* HOME */
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    max-width: 25%;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.profile-text {
+    padding: 0 2em 0 3em;
+}
+
+/* ABOUT */
+.about p {
+    width: 80ch;
 }
 
 ul.posts { 
@@ -41,4 +141,77 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+/* COMPETENCES */
+section {
+    margin-top: 3em;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    padding-bottom: 1em;
+}
+
+th {
+    width: 33%;
+    padding: 1em 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding: 0 1em;
+    vertical-align: top;
+}
+
+td li {
+    padding: 1em 0 0.5em 0;
+}
+
+
+/* CONTACT */
+.contact-container {
+    display: flex;
+    max-width: 80%;
+}
+
+.contact-container .vcard {
+    margin: 3em 0 0 5em;
+    font-size: 0.85em;
+    order: 3;
+}
+
+.contact-container .contact-form {
+    flex-grow: 1;
+}
+
+
+/* CV */
+.cv-title {
+    display: flex;
+}
+
+.cv-title a.cv-download {
+    flex-grow: 1;
+    font-size: 2.5em; /* Hacks :X */
+    margin: 1.5em 0 1em 0.5em; /* More hacks :( */
+}
+
+.cv-title a.cv-download img {
+    height: 100%;
+    fill: blue;
+}
+
+
+/* Projects */
+.projects li {
+    padding: 1em 0; /* TODO: I need sleep :P */
+}
+
+.projects p {
+    font-size: 0.95em;
 }
