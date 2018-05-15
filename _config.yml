@@ -1,2 +1,15 @@
 name: E-portfolio van Jaron Trossaert
 markdown: kramdown
+navigation:
+  - text: Home
+    url: /
+  - text: Over mij
+    url: /about/
+  - text: Competenties & vaardigheden
+    url: /competences/
+  - text: Projecten
+    url: /projects/
+  - text: CV
+    url: /cv/
+  - text: Contact
+    url: /contact/
