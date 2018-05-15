@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">Over mij</a></li>
-				<li><a href="/competences">Competenties & vaardigheden</a></li>
-				<li><a href="/projects">Gerealiseerde projecten</a></li>
-	        		<li><a href="/cv">CV</a></li>
-				<li><a href="/contact">Contactpagina</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:jaron.trossaert@gmail.com">E-mail</a></li>
-				<li><a href="https://www.linkedin.com/in/jaron-trossaert-7b255684/">LinkedIn</a></li>
-	        		<li><a href="https://github.com/Jornax">GitHub</a></li>
-				<li><a href="https://twitter.com/JornaxK">Twitter</a></li>
-				<li><a href="https://www.facebook.com/jaron.trostomaat">Facebook</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+    <html>
+        <head>
+            <title>{{ page.title }}</title>
+            <!-- link to main stylesheet -->
+            <link rel="stylesheet" type="text/css" href="/css/main.css">
+            <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:300,400" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <nav>
+                    <ul>
+                        {% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
+                        {% for link in site.navigation %}
+                        <li {% if url == link.url %}class="active"{% endif %}>
+                            <a href="{{link.url}}">{{link.text}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+                <div class="name">Jaron Trossaert</div>
+            </header>
+            <div class="container">
+            
+            {{ content }}
+            
+            </div><!-- /.container -->
+            <footer>
+                <ul>
+                    <li><a href="mailto:jaron.trossaert@gmail.com">E-mail</a></li>
+                <li><a href="https://www.linkedin.com/in/jaron-trossaert-7b255684/">LinkedIn</a></li>
+                    <li><a href="https://github.com/Jornax">GitHub</a></li>
+                <li><a href="https://twitter.com/JornaxK">Twitter</a></li>
+                <li><a href="https://www.facebook.com/jaron.trostomaat">Facebook</a></li>
+                </ul>
+            </footer>
+        </body>
+    </html>
